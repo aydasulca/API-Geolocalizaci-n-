@@ -55,14 +55,20 @@ function initMap(){
             if (status === 'OK') {
               var distancia =
                Number((response.routes[0].legs[0].distance.text.replace("km","")).replace(",","."));
-              var costo = distancia*1.75;
-              if (costo<4) {
-                tarifa.innerHTML="S/.4";
+               tarifa.classList.remove("none");
+              var costo = distancia * 1.75;
+              if (costo < 4) {
+                tarifa.innerHTML= "S/. 4";
+              }else {
+
+                tarifa.innerHTML= "S/. " + parseInt(costo);
               }
-              tarifa.innerHTML= "S/. " + parseInt(costo);
               console.log(response.routes[0].legs[0].distance.text);
               directionsDisplay.setDirections(response);
-              miUbicacion.setMap(null);
+              if(miUbicacion!==undefined){
+                miUbicacion.setMap(null);
+
+              }
               markadorLaboratoria.setMap(null);
             }else {
               window.alert("No encontramos una ruta.");
@@ -75,6 +81,5 @@ function initMap(){
         calculateAndDisplayRoute(directionsService, directionsDisplay);
         };
         document.getElementById('trazar-ruta').addEventListener("click", trazarRuta);
-
 
 };

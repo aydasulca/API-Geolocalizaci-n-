@@ -9,27 +9,30 @@
   <link rel="stylesheet" href="assets/css/bootstrap.min.css">
 </head>
 <body>
-<div class="style-tarifa" id="tarifa"></div>
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-12">
+      <div class="col-xs-12 col-md-12 background-orange">
         <div class="navbar-form">
-          <div class="col-md-4 form-group">
-            <span class=" glyphicon glyphicon-record" aria-hidden="true"></span>
-            <input type="text" id="input-partida" class="form-control" placeholder="Search">
+          <div class="col-xs-12 col-md-4 form-group ">
+            <span class="iconos glyphicon glyphicon-record" aria-hidden="true"></span>
+            <input type="text" id="input-partida" class="form-control" placeholder="Ingresa tu punto de partida">
           </div>
-          <div class="col-md-4 form-group">
-            <span class="glyphicon glyphicon-send" aria-hidden="true"></span>
-            <input type="text" id="input-destino" class="form-control" placeholder="Search">
+          <div class="col-xs-12 col-md-4 form-group">
+            <span class="iconos glyphicon glyphicon-send" aria-hidden="true"></span>
+            <input type="text" id="input-destino" class="form-control" placeholder="Ingresa tu destino">
+          </div>
+          <div class="col-xs-6 col-md-2 col-md-offset-0 button">
+            <button type="button" class="btn btn-default col-md-offset-2 button-map" id="trazar-ruta">Trazar ruta</button>
+          </div>
+          <div class="col-xs-6 col-md-2">
+            <button type="button" class="btn btn-default col-md-offset-3 button-map" id="encuentrame">Encuéntrame</button>
           </div>
         </div>
-        <button type="submit" id="trazar-ruta" class="col-md-2 btn btn-default">Trazar ruta</button>
-        <button type="submit" class="col-md-2 btn btn-default" id="encuentrame">Encuéntrame</button>
       </div>
     </div>
   </div>
   <div id="map"></div>
-  <!--<button type="button" name="button" id="encuentrame">ENCUENTRAME</button>-->
+  <div class="none tarifa" id="tarifa"></div>
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCJSAJKtw5ljIYAh_xXWvHBzd5R4WaVSDU&callback=initMap&libraries=places"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
   <script src="assets/js/bootstrap.min.js"></script>

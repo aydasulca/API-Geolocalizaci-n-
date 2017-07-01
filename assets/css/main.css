@@ -1,15 +1,93 @@
-
 div#map{
   width: 100%;
-  height: 100vh;
-  border: 2px solid #afafaf;
+  height: 90.5vh;
+  border: 6px solid #afafaf;
 }
-div#tarifa{
+.container-fluid{
+  /*border: 6px solid #afafaf;*/
+}
+.tarifa{
   width: 200px;
   height: 200px;
   background-color: black;
-  position: fixed;
+  color: #f7b617;
+  position: absolute;
   bottom: 0;
   right: 0;
-  z-index: 1;
+  font-size: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.none{
+  display: none;
+}
+.iconos{
+  color: white;
+  padding: 0 10px;
+}
+.background-orange{
+  background-color: #f7b617;
+}
+.navbar-form{
+  height: 5vh;
+  margin-top: 14px!important;
+  margin-bottom: 14px!important;
+}
+.form-control{
+  width: 80%!important;
+  background: #f7b617!important;
+  border: 2px solid white!important;
+  color: white!important;
+}
+.form-control::-webkit-input-placeholder {
+    /* Google Chrome y Safari */
+    color: white!important;
+}
+.form-control:-moz-placeholder {
+    /* Firefox anterior a 19 */
+    color: white!important;
+}
+.form-control::-moz-placeholder {
+    /* Firefox 19 y superior */
+    color: white!important;
+}
+.form-control:-ms-input-placeholder {
+    /* Internet Explorer 10 y superior */
+    color: white!important;
+}
+.form-control:focus{
+  border-color: white!important;
+}
+.button{
+  border-right: 2px solid white;
+}
+.button-map{
+  width: 120px;
+}
+.btn-default:hover{
+  background-color: white!important;
+  border-color: white!important;
+}
+.btn-default{
+  background-color: white!important;
+  border-color: white!important;
+  text-align: center;
+}
+@media (max-width: 767px){
+  .navbar-form{
+    height: 22vh;
+  }
+  .form-control{
+    display: inline-block!important;
+  }
+  div#map{
+    height: 76vh;
+  }
+  .form-group{
+    margin-bottom: 15px!important;
+  }
+  .button{
+    border: none;
+  }
 }
